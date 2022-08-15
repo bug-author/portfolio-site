@@ -98,10 +98,61 @@
     <main class="main">
       <section class="filters container">
         <!-- Filter tabs -->
+        <ul class="filters__content">
+          <button class="filters__button" data-target="#projects">
+            Projects
+          </button>
+
+          <button class="filters__button" data-target="#skills">Skills</button>
+        </ul>
+
         <div class="filters_sections">
           <!-- Projects -->
+          <div class="projects__content grid" data-content id="projects">
+            <article class="projects__card">
+              <img src="project1" alt="" class="projects__img" />
 
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Mobile</span>
+                  <h3 class="projects__title">Quote Bee</h3>
+                  <a href="" class="projects__button button button__small">
+                    <i class="ri-link"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img src="project1" alt="" class="projects__img" />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Mobile</span>
+                  <h3 class="projects__title">Feed Blast</h3>
+                  <a href="" class="projects__button button button__small">
+                    <i class="ri-link"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img src="project1" alt="" class="projects__img" />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle"></span>
+                  <h3 class="projects__title"></h3>
+                  <a href="" class="projects__button button button__small">
+                    <i class="ri-link"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
           <!-- Skills -->
+          <div class="skills__content grid" data-content id="skills"></div>
         </div>
       </section>
     </main>
