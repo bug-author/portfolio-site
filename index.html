@@ -4,33 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Favicon -->
+    <!--=============== FAVICON ===============-->
     <link
       rel="shortcut icon"
       href="assets/img/favicon_2.png"
       type="image/x-icon"
     />
-    <!-- Remix Icons -->
+
+    <!--=============== REMIX ICONS ===============-->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <!-- CSS -->
+
+    <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <title>Portfolio</title>
+
+    <title>Portfolio site</title>
   </head>
   <body>
-    <!-- Header -->
+    <!--=============== HEADER ===============-->
     <header class="profile container">
+      <!-- Theme button -->
+      <i class="ri-moon-line change-theme" id="theme-button"></i>
+
       <div class="profile__container grid">
         <div class="profile__data">
           <div class="profile__border">
             <div class="profile__perfil">
+              <!-- Insert your image, according to the example size of the portfolio -->
               <img src="assets/img/portfolio_web.png" alt="" />
             </div>
           </div>
-          <h2 class="profile__name">Abdullah Tahir</h2>
-          <h3 class="profile__profession">Software Developer</h3>
+
+          <h2 class="profile__name">Abdullah Bin Tahir</h2>
+          <h3 class="profile__profession">Software developer</h3>
 
           <ul class="profile__social">
             <a
@@ -41,49 +49,51 @@
               <i class="ri-github-line"></i>
             </a>
 
-            <a
-              href="https://stackoverflow.com/users/10934636/stuckoverflow"
-              target="_blank"
-              class="profile__social-link"
-            >
-              <i class="ri-stack-overflow-line"></i>
-            </a>
+            <ul class="profile__social">
+              <a
+                href="https://stackoverflow.com/users/10934636/stuckoverflow"
+                target="_blank"
+                class="profile__social-link"
+              >
+                <i class="ri-stack-overflow-line"></i>
+              </a>
           </ul>
         </div>
+
         <div class="profile__info grid">
           <div class="profile__info-group">
             <h3 class="profile__info-number">1</h3>
             <p class="profile__info-description">
-              Year of Freelance <br />
-              work
+              Year of <br />
+              freelance work
             </p>
           </div>
-
           <div class="profile__info-group">
-            <h3 class="profile__info-number">+20</h3>
+            <h3 class="profile__info-number">20+</h3>
             <p class="profile__info-description">
               Completed <br />
               projects
             </p>
           </div>
-
           <div class="profile__info-group">
-            <h3 class="profile__info-number">15</h3>
+            <h3 class="profile__info-number">15+</h3>
             <p class="profile__info-description">
-              Satisfied <br />
+              Happy <br />
               customers
             </p>
           </div>
         </div>
 
         <div class="profile__buttons">
-          <a download="" href="" class="button">
+          <!-- Insert your CV -->
+          <a download="" href="assets/docs/Abdullah_Resume.pdf" class="button">
             Download Resume <i class="ri-download-line"></i>
           </a>
 
           <div class="profile__buttons-small">
+            <!-- Insert a real number plus country code -->
             <a
-              href="https://api.whatsapp.com/send?phone=923121579660&0text=Hello!"
+              href="https://api.whatsapp.com/send?phone=923121579660&text=Hello, more information!"
               target="_blank"
               class="button button__small button__gray"
             >
@@ -94,29 +104,67 @@
       </div>
     </header>
 
-    <!-- main -->
+    <!--=============== MAIN ===============-->
     <main class="main">
       <section class="filters container">
-        <!-- Filter tabs -->
+        <!--=============== FILTERS TABS ===============-->
         <ul class="filters__content">
-          <button class="filters__button" data-target="#projects">
+          <button
+            class="filters__button filter-tab-active"
+            data-target="#projects"
+          >
             Projects
           </button>
-
           <button class="filters__button" data-target="#skills">Skills</button>
         </ul>
 
-        <div class="filters_sections">
-          <!-- Projects -->
-          <div class="projects__content grid" data-content id="projects">
+        <div class="filters__sections">
+          <!--=============== PROJECTS ===============-->
+          <div
+            class="projects__content grid filters__active"
+            data-content
+            id="projects"
+          >
+          <article class="projects__card">
+            <img src="assets/img/placeholder_project.jpg" alt="" class="projects__img" />
+
+            <div class="projects__modal">
+              <div>
+                <span class="projects__subtitle">Final Year Project</span>
+                <h3 class="projects__title">Motion forecasting for vehicles</h3>
+                <a href="https://github.com/shy-tan/final-year-project" target="_blank" class="projects__button button button__small">
+                  <i class="ri-link"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+
             <article class="projects__card">
-              <img src="project1" alt="" class="projects__img" />
+              <!-- Insert your image in a rectangular format (Ex: 600 x 400, 1000 x 800, 1200 x 1000, etc) -->
+              <img src="assets/img/placeholder_project.jpg" alt="" class="projects__img" />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">Momentum Dashboard Extension Clone</h3>
+                  <a href="https://github.com/shy-tan/aura" target="_blank" projects__button button button__small">
+                    <i class="ri-link"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+           
+
+            <article class="projects__card">
+              <img src="assets/img/placeholder_project.jpg" alt="" class="projects__img" />
 
               <div class="projects__modal">
                 <div>
                   <span class="projects__subtitle">Mobile</span>
                   <h3 class="projects__title">Quote Bee</h3>
-                  <a href="" class="projects__button button button__small">
+                  <a href="https://github.com/shy-tan/quote-bee" target="_blank" class="projects__button button button__small">
                     <i class="ri-link"></i>
                   </a>
                 </div>
@@ -124,46 +172,226 @@
             </article>
 
             <article class="projects__card">
-              <img src="project1" alt="" class="projects__img" />
+              <img src="assets/img/placeholder_project.jpg" alt="" class="projects__img" />
 
               <div class="projects__modal">
                 <div>
                   <span class="projects__subtitle">Mobile</span>
                   <h3 class="projects__title">Feed Blast</h3>
-                  <a href="" class="projects__button button button__small">
+                  <a href="https://github.com/shy-tan/feed-blast" target="_blank" class="projects__button button button__small">
                     <i class="ri-link"></i>
                   </a>
                 </div>
               </div>
             </article>
 
-            <article class="projects__card">
-              <img src="project1" alt="" class="projects__img" />
-
-              <div class="projects__modal">
-                <div>
-                  <span class="projects__subtitle"></span>
-                  <h3 class="projects__title"></h3>
-                  <a href="" class="projects__button button button__small">
-                    <i class="ri-link"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
           </div>
-          <!-- Skills -->
-          <div class="skills__content grid" data-content id="skills"></div>
+
+          <!--=============== SKILLS ===============-->
+          <div class="skills__content grid" data-content id="skills">
+            <div class="skills__area">
+              <h3 class="skills__title">Frontend</h3>
+
+              <div class="skills__box">
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">HTML</h3>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">CSS</h3>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">JavaScript</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">React</h3>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Tailwind CSS</h3>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Git</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills__area">
+              <h3 class="skills__title">Backend</h3>
+
+              <div class="skills__box">
+                <div class="skills__group">
+
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">SQLite/ PostgreSQL</h3>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Firebase</h3>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">MongoDB</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Fast API</h3>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Node Js</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="skills__area">
+              <h3 class="skills__title">Data</h3>
+
+              <div class="skills__box">
+                <div class="skills__group">
+
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Tensorflow/ Keras</h3>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Pandas</h3>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">SQL</h3>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Data Visualization</h3>
+                    </div>
+                  </div>
+
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Web Scraping</h3>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    <div>
+                      <h3 class="skills__name">Scripting</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skills__area">
+            <h3 class="skills__title">Mobile</h3>
+
+            <div class="skills__box">
+              <div class="skills__group">
+
+
+                <div class="skills__data">
+                  <i class="ri-checkbox-circle-line"></i>
+
+                  <div>
+                    <h3 class="skills__name">Flutter/ Dart</h3>
+                  </div>
+                </div>
+
+                
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer     -->
-    <footer class="footer container"></footer>
+    <!--=============== FOOTER ===============-->
+    <footer class="footer container">
+    </footer>
 
-    <!-- ScrollReveal -->
-    <script src=""></script>
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
 
-    <!-- main js -->
-    <script src=""></script>
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
